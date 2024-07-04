@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It is a note taking web app with an AI Chatbot to help create and search through the added notes.
+An intelligent note taking app with AI integration build with OpenAI, PineCone, Next.js, Shadcn UI, Clerk, and mongoDB.
 
 ## Getting Started
 

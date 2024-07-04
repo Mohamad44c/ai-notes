@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Notes - Notes",
+  title: "FlowBrain - Notes",
 };
 
 export default function page() {
-  return <div>Notes pages</div>;
+  return <div>Notes page</div>;
 }
