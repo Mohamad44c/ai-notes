@@ -9,4 +9,4 @@ const pinecone = new Pinecone({
   apiKey,
 });
 
-const index = pinecone.index("nextjs-ai-note-app");
+export const notesIndex = pinecone.index("nextjs-ai-note-app");
