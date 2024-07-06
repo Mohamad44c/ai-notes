@@ -1,6 +1,12 @@
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { createNoteSchema, CreateNoteSchema } from "@/lib/validation/note";
+import { Note } from "@prisma/client";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import LoadingButton from "./ui/loading-button";
 import {
   Dialog,
   DialogContent,
@@ -16,12 +22,6 @@ import {
   FormLabel,
   FormMessage,
 } from "./ui/form";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import LoadingButton from "./ui/loading-button";
-import { useRouter } from "next/navigation";
-import { Note } from "@prisma/client";
-import { useState } from "react";
 
 interface AddEditNoteDialogProps {
   open: boolean;

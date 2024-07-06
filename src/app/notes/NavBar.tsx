@@ -8,9 +8,14 @@ import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 import AddNoteDialog from "@/components/AddEditNoteDialog";
-
+import ThemeToggleButton from "@/components/ThemeToggleButton";
+import { dark } from "@clerk/themes";
+import { useTheme } from "next-themes";
 export default function NavBar() {
-  const [showAddEditNoteDialog, setshowAddEditNoteDialog] = useState<boolean>(false);
+  const { theme } = useTheme();
+
+  const [showAddEditNoteDialog, setshowAddEditNoteDialog] =
+    useState<boolean>(false);
 
   return (
     <>
@@ -25,16 +30,21 @@ export default function NavBar() {
               <Plus size={20} className="mr-2" />
               Add Note
             </Button>
+            <ThemeToggleButton />
             <UserButton
               afterSignOutUrl="/"
               appearance={{
+                baseTheme: theme === "dark" ? dark : undefined,
                 elements: { avatarBox: { width: "2.5rem", height: "2.5rem" } },
               }}
             />
           </div>
         </div>
       </div>
-      <AddNoteDialog open={showAddEditNoteDialog} setOpen={setshowAddEditNoteDialog} />
+      <AddNoteDialog
+        open={showAddEditNoteDialog}
+        setOpen={setshowAddEditNoteDialog}
+      />
     </>
   );
 }
