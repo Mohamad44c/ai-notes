@@ -33,7 +33,7 @@ export async function POST(req: Request) {
       },
     });
 
-    console.log("relevant notes: " + relevantNotes);
+   
 
     const systemMessage: ChatCompletionMessage = {
       role: "assistant",
