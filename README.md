@@ -1,5 +1,7 @@
 An intelligent note taking app with AI integration build with OpenAI, PineCone, Next.js, Shadcn UI, Clerk, and MongoDB.
 
+[View Demo](https://flowbrain-blush.vercel.app/notes)
+
 ## Installation
 
 1. Clone the repository:
